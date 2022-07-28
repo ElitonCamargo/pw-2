@@ -8,7 +8,16 @@
 </head>
 <body>
     <?php
-        echo "Eliton"
+        require_once 'class/Cliente.php';
+        $cliente = new Cliente();
+        $cliente->nome = 'Eliton';
+        $cliente->email = 'camargoliveira';
+        $cliente->senha = '#ER$%$#@#TGVgvsdffsd';
+        $cliente->endereco = 'Rua Joaquim Antunes de Souza 66';
+        $cliente->imagem = 'https://avatars.githubusercontent.com/u/18017848?v=4';
+
+        var_dump($cliente->cadastrar());
+
     ?>
 </body>
 </html>

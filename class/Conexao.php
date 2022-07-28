@@ -1,7 +1,7 @@
 <?php
 define('HOST',      'localhost');
 define('USERNAME',  'root');
-define('DBNAME',    'loja_produtos');
+define('DBNAME',    'sistema_pw2');
 define('PASSWORD',  '');
 define('PORT',      '3306');
 
