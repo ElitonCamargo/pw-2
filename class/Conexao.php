@@ -18,7 +18,7 @@ class Conexao {
         return $this->error;
     }
 
-    private function connect(){
+    public function connect(){
         try {        
             $pdo = new PDO('mysql:host='.HOST.';port='.PORT.';dbname='.DBNAME,USERNAME,PASSWORD);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
