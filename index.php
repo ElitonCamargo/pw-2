@@ -34,15 +34,6 @@
                         <label>Nome</label>
                         <input type="text" class="form-control" placeholder="Nome Completo">
                     </div>
-
-                    <div class="form-group col-md-6">
-                        <label>Email</label>
-                        <input type="email" class="form-control" placeholder="E-mail">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label>Senha</label>
-                        <input type="password" class="form-control" placeholder="Senha">
-                    </div>
                     <div class="form-group col-md-6">
                         <label>Foto</label>
                         <input type="file" class="form-control-file">
