@@ -15,49 +15,26 @@
     <nav class="bg-light">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="?home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cadastro</a>
+                <a class="nav-link" href="?cadastro">Cadastro</a>
             </li>
         </ul>
     </nav>
 
     <div class="container">
-
-
-        <fieldset>
-            <legend>Cadastro de usuário</legend>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>Nome</label>
-                        <input type="text" class="form-control" placeholder="Nome Completo">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label>Foto</label>
-                        <input type="file" class="form-control-file">
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Entrar</button>
-            </form>
-        </fieldset>
-
-        <fieldset>
-            <legend class="mb-4">Usuários cadastrados</legend>
-            <div class="card-columns">
-
-                <div class="card">
-                    <img class="card-img-top" src=".../100px160/" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Título do card</h5>
-                        <p class="card-text">Um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                    </div>
-                </div> 
-
-            </div>
-        </fieldset>
+        <?php
+            if(isset($_GET['perfil'])){
+                include_once 'view/usuario_perfil.php';
+            }
+            elseif(isset($_GET['cadastro'])){
+                include_once 'view/usuario_cadastro.php';
+            }
+            else{
+                include_once 'view/usuario_home.php';
+            }
+        ?>
     </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

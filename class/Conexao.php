@@ -1,7 +1,7 @@
 <?php
 define('HOST',      'localhost');
 define('USERNAME',  'root');
-define('DBNAME',    'sistema_pw2');
+define('DBNAME',    'rede_fotos');
 define('PASSWORD',  '');
 define('PORT',      '3306');
 
