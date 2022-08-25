@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-    <nav class="bg-light">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Rede-Fotos</a>
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" href="?home">Home</a>
@@ -21,6 +21,11 @@
                 <a class="nav-link" href="?cadastro">Cadastro</a>
             </li>
         </ul>
+        <form class="form-inline" method="POST">
+            <input class="form-control mr-sm-2"                     name="txtLoginEmail"    type="text"     placeholder="E-mail">
+            <input class="form-control mr-sm-2"                     name="txtLoginSenha"    type="password" placeholder="Senha">
+            <button class="btn btn-outline-success my-2 my-sm-0"    name="btnLogin"         type="submit">Login</button>
+        </form>
     </nav>
 
     <div class="container">
