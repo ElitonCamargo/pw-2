@@ -19,7 +19,7 @@
             if($foto->cadastrar()){
                 $msg = "Usuário e foto cadastrado com sucesso!!!";
             }
-            $msg+= "<p>Nome: $usuario->nome</p>";
+            $msg = "$msg <p>Nome: $usuario->nome</p>";
             alerta('Cadastro',$msg);                   
         }
         else{

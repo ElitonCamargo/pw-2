@@ -1,6 +1,6 @@
 <?php
 
-function alerta($titulo, $texto, $tipo='sucess')
+function alerta($titulo, $texto, $tipo='success')
 {
     echo'
         <div class="alert alert-'.$tipo.' alert-dismissible fade show" role="alert">
