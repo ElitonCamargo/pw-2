@@ -7,11 +7,11 @@ class Usuario{
 
     public function cadastrar(){
         $cx = new Conexao();
-        $cmdSql = 'INSERT INTO usuario(nome) VALUES (:email, :senha; :nome)';
+        $cmdSql = 'INSERT INTO usuario(email, senha, nome) VALUES (:email, :senha, :nome)';
         $dados =[
             ':email'=>$this->email,
             ':senha'=>$this->senha,
-            ':nome'=>$this->nome,
+            ':nome' =>$this->nome,
         ];
         if($cx->insert($cmdSql,$dados)){
             return true;
