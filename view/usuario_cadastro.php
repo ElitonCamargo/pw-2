@@ -3,6 +3,7 @@
     require_once 'class/Usuario.php';
     require_once 'class/Upload.php';
     $usuario = new Usuario();
+    $foto = new Foto();
     
     if(isset($_POST['btnCadastrar'])){
         $usuario->email = $_POST['txtEmail'];
@@ -13,8 +14,14 @@
         
         if($usuario->cadastrar()){
             $upload = new Upload($_FILES['foto'],'img/');
-            echo $upload->salvarImagem();            
-            alerta('Cadastro','Cadastro realizado com sucesso!!! <p>Nome: '.$usuario->nome.'</p>');                   
+            $foto->link = $upload->salvarImagem(); 
+            $foto->fk_usuario = $usuario->email;
+            $msg = 'Usuário cadastrado com sucesso!!!';
+            if($foto->cadastrar()){
+                $msg = "Usuário e foto cadastrado com sucesso!!!";
+            }
+            $msg+= "<p>Nome: $usuario->nome</p>";
+            alerta('Cadastro',$msg);                   
         }
     }
 
