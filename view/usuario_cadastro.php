@@ -2,6 +2,7 @@
     require_once 'funcoes.php';
     require_once 'class/Usuario.php';
     require_once 'class/Upload.php';
+    require_once 'class/Foto.php';
     $usuario = new Usuario();
     $foto = new Foto();
     
@@ -9,9 +10,7 @@
         $usuario->email = $_POST['txtEmail'];
         $usuario->senha = $_POST['txtSenha'];
         $usuario->nome = $_POST['txtNome'];
-
-        var_dump($_FILES['foto']);
-        
+               
         if($usuario->cadastrar()){
             $upload = new Upload($_FILES['foto'],'img/');
             $foto->link = $upload->salvarImagem(); 
@@ -22,6 +21,9 @@
             }
             $msg+= "<p>Nome: $usuario->nome</p>";
             alerta('Cadastro',$msg);                   
+        }
+        else{
+            alerta('Erro','Falha ao cadastrar usuário','danger');
         }
     }
 

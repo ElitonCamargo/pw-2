@@ -1,9 +1,9 @@
 <?php
 
-function alerta($titulo, $texto)
+function alerta($titulo, $texto, $tipo='sucess')
 {
     echo'
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-'.$tipo.' alert-dismissible fade show" role="alert">
         <h4 class="alert-heading">'.$titulo.'</h4>
         <hr>
         <p class="mb-0">'.$texto.'</p>
