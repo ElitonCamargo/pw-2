@@ -1,14 +1,22 @@
 <?php
 class DataBase{
+    public $host;
+    public $dbname;
+    public $port;
+    public $user;
+    public $password;
 
     function __construct()
     {
-        $host = 'localhost';
-        $dbname = '';
-        $port = '3306';
-        $user = 'root';
-        $password = '';
-        return new PDO("mysql:host=$host;dbname=$dbname;port=$port", $user, $password);
+        $this->host = 'localhost';
+        $this->dbname = 'pw2';
+        $this->port = '3306';
+        $this->user = 'root';
+        $this->password = '';
         
+    }
+    
+    public function getCx(){
+        return new PDO("mysql:host=$this->host;dbname=$this->dbname;port=$this->port", $this->user, $this->password);   
     }
 }
