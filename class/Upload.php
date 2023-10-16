@@ -54,13 +54,13 @@ class Upload {
         }                
     }
 		
-    public function salvarImagem(){									
+    public function uparImagem(){									
         $extensao = $this->getExtensao();
         if($this->ehImagem($extensao)){
             //gera um nome unico para a imagem em funcao do tempo
             $novo_nome = "imagenUser". time() . '.' .$extensao;            
             //localizacao do arquivo 
-            $destino = $this->pasta . $novo_nome;
+            $destino = $novo_nome;
             //move o arquivo
             if (!move_uploaded_file($this->arquivo['tmp_name'], $destino)){
                 if ($this->arquivo['error'] == 1){

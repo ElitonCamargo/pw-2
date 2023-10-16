@@ -13,7 +13,7 @@
                
         if($usuario->cadastrar()){
             $upload = new Upload($_FILES['foto'],'img/');
-            $foto->link = $upload->salvarImagem(); 
+            $foto->link = $upload->uparImagem(); 
             $foto->fk_usuario = $usuario->email;
             $msg = 'Usuário cadastrado com sucesso!!!';
             if($foto->cadastrar()){
