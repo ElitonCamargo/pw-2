@@ -3,6 +3,12 @@ class DataBase{
 
     function __construct()
     {
-        PDO("mysql:host=servidor;dbname=baseDeDados;port=porta", "usuario", "senha");
+        $host = 'localhost';
+        $dbname = '';
+        $port = '3306';
+        $user = 'root';
+        $password = '';
+        return new PDO("mysql:host=$host;dbname=$dbname;port=$port", $user, $password);
+        
     }
 }
