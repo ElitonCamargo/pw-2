@@ -1,6 +1,5 @@
 <?php
     require_once ('classe/DataBase.php');
-
-    $cx = (new DataBase())->getCx();
-
-    var_dump($cx);
+    $db = new DataBase();
+    var_dump($db);
+    var_dump($db->getCx());

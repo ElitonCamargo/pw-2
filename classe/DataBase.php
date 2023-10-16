@@ -12,8 +12,7 @@ class DataBase{
         $this->dbname = 'pw2';
         $this->port = '3306';
         $this->user = 'root';
-        $this->password = '';
-        
+        $this->password = '';        
     }
     
     public function getCx(){
