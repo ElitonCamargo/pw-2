@@ -27,7 +27,7 @@
         <input type="text" name="txt_nome"      placeholder="Nome"><br>
         <input type="text" name="txt_telefone"  placeholder="Telefone"><br>
         <input type="text" name="txt_foto"      placeholder="Link foto"><br>
-        <input type="submit" value="Cadastrar" name="btnCad">
+        <input type="submit" value="Cadastrar" name="btnCadP">
     </form>
 </body>
 </html>
