@@ -6,15 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        // require_once 'classe/Pessoa.php';
-        // $pessoa = new Pessoa();
-        // $pessoa->email = "jose@hotmail.com";
-        // $pessoa->nome = "José Silva";
-        // $pessoa->telefone = "23423432";
-        // $pessoa->foto = "gdsfgdfg.png";
-        // $pessoa->cadastrar();
+    <?php     
         if(isset($_POST['btnCad'])){
+            require_once 'classe/Pessoa.php';
             $pessoa = new Pessoa();
             $pessoa->email = $_POST['txt_email'];
             $pessoa->nome = $_POST['txt_nome'];
