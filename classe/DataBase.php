@@ -1,10 +1,10 @@
 <?php
 class DataBase{
-    public $host;
-    public $dbname;
-    public $port;
-    public $user;
-    public $password;
+    private $host;
+    private $dbname;
+    private $port;
+    private $user;
+    private $password;
 
     function __construct()
     {
