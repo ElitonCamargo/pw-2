@@ -8,3 +8,6 @@ CREATE TABLE pessoa(
 )ENGINE=INNODB;
 
 INSERT INTO `pessoa` (`id`, `email`, `nome`, `telefone`, `foto`) VALUES (NULL, 'camargoliveira@etec.sp.gov.br', 'Eliton Camargo', '(14)99988-9900', 'userEliton.png');
+
+
+CREATE PROCEDURE `pessoa_listar`(IN `filtro` VARCHAR(50)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER SELECT * FROM pessoa WHERE email LIKE concat('%',filtro,'%') || nome like concat('%',filtro,'%')

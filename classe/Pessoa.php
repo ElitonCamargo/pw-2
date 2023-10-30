@@ -17,4 +17,17 @@ class Pessoa{
         $cx_preparado->bindValue(':foto',$this->foto);
         return $cx_preparado->execute();
     }
+
+    public function listar($filtro=""){
+        $cx = (new DataBase())->getCx();
+        $cmdSql = 'CALL pessoa_listar(:filtro)';
+        $cx_preparado = $cx->prepare($cmdSql);
+        $cx_preparado->bindValue(':filtro',$filtro);
+        if($cx_preparado->execute()){
+            if($cx_preparado->rowCount()){
+                $lista_pessoa = $cx_preparado->fetchAll();
+            }
+        }
+        return false;
+    }
 }
