@@ -33,7 +33,7 @@
     <?php
         require_once 'classe/Pessoa.php';
         $p = new Pessoa();
-        $p->listar();
+        var_dump($p->listar());
     ?>
 </body>
 </html>

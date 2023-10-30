@@ -25,7 +25,9 @@ class Pessoa{
         $cx_preparado->bindValue(':filtro',$filtro);
         if($cx_preparado->execute()){
             if($cx_preparado->rowCount()){
-                $lista_pessoa = $cx_preparado->fetchAll();
+
+                $lista_pessoa = $cx_preparado->fetchAll(PDO::FETCH_CLASS, __CLASS__);
+                return $lista_pessoa;
             }
         }
         return false;
